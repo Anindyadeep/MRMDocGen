@@ -46,7 +46,7 @@ class Routes:
 
     def export(self):
         # TODO Integrate chatGPT for better writing output
-        api_key = st.text_input(label="Enter your open AI api key: ")
+        api_key = st.text_input(label="Enter your open AI api key: ", type="password")
         if api_key:
             pdf_report = PdfReportGenerator(api_key=api_key)
             pdf_report.prepare_report()
